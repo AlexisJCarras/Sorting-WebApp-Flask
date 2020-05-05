@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Main page </title>
-        <body> This is a Sorting experiment website</body>
-        <a href = "{{url_for('info')}}">More info</a>
 
-      </head>
+{% block heading %}
+    This is a Sorting experiment website 
+    <a href = "{{url_for('info')}}">More info</a>
+{% endblock %}
 
-</html>
+
+ {% block body %}   
+
+        <form action = "{{url_for('sort') }}" method = "post">
+        <button>Submit</button>
+        
+                
+    
+{% endblock %}
+
+
+
+
+

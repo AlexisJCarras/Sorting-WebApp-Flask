@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block heading %}
+
+    Try sorting: 
+
+{% endblock %}
+
+
+    {% block body %}
+
+        <form action = "{{url_for('sort') }}" method = "post">
+            <input type = "text" name = "Numbers" placeholder = "Separate numbers by spaces">
+            <input type = "radio" id = "Bubble Sort" name = "sort_selection" value = "Bubble Sort">
+            <button> Sort </button>
+        </form>
+
+        <p>Sorted {{sorted}}</p>
+
+    {% endblock %}
